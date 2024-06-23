@@ -1,0 +1,18 @@
+The output will be ['name', 'salary', 'country', 'phoneNo']
+
+
+Explanation:
+
+1. The code is wrapped inside an immediately-invoked function expression '(function() { ... })();', which creates a local scope and executes the code inside it immediately.
+
+2. 'use strict'; is used to enforce strict mode, which helps catch common coding mistakes and prevents certain actions that were allowed in older versions of JavaScript.
+
+3. A 'person' object is created with initial properties 'name: 'John'.
+
+4. Properties 'salary' and 'country' are added to the 'person' object using dot notation ('person.salary = '10000$'') and bracket notation ('person['country'] = 'USA'), respectively.
+
+5. 'Object.defineProperty' is used to add a new property 'phoneNo' to the 'person' object with the specified configuration. In this case, 'enumerable' is set to 'true', which means the 'phoneNo' property will be included when listing the object's properties.
+
+6. 'console.log(Object.keys(person));' is used to log all the enumerable property names of the 'person' object to the console.
+
+When the code is executed, it logs '['name', 'salary', 'country', 'phoneNo']' to the console because these are the enumerable properties of the 'person' object. The 'Object.keys()' method returns an array containing the names of all enumerable properties of an object.

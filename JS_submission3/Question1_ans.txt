@@ -1,0 +1,10 @@
+1)In JavaScript, a closure is a feature.
+2)where an inner function has access to the outer function’s variables-a scope chain. 
+3)Closures are created every time a function is created at function creation time.
+4)A closure gives access to an outer function’s scope from an inner function.
+5)The closure has three scopes
+
+Local scope (own scope)
+Outer function’s scope
+Global scope
+

@@ -1,0 +1,56 @@
+7) The output for the following code will be 
+
+John
+John
+
+Explanation:
+The code defines a constructor function 'Person' and adds properties and methods to both the prototype and the constructor function itself.
+
+1) The 'Person' constructor function is defined:
+function Person(name, age) {
+    this.name = name || "John";
+    this.age = age || 24;
+    this.displayName = function() {
+        console.log(this.name);
+    }
+}
+
+2) A static property and method are added to the 'Person' constructor function:
+Person.name = "John";
+Person.displayName = function() {
+    console.log(this.name);
+}
+
+3)An instance of 'Person' is created:
+var person1 = new Person('John');
+
+
+4)The 'displayName' method of the 'person1' instance is called:
+person1.displayName();
+
+
+5)The 'displayName' method of the 'Person' constructor function is called:
+Person.displayName();
+
+
+So,
+>>When var person1 = new Person('John'); is executed, a new instance of Person is created with the name 'John' and the default age 24. The displayName method on this instance is defined as
+function() {
+    console.log(this.name);
+}
+
+>>When person1.displayName(); is called, the displayName method of the person1 instance is executed. In this context, this refers to the person1 instance, so this.name is 'John'. Therefore, it defines:
+
+John
+
+>>When Person.displayName(); is called, the displayName method of the Person constructor function is executed. In this context, this refers to the Person constructor function itself, so this.name is 'John' (as set in the static property). Therefore, it defines:
+
+John
+
+>>The final output will be:
+John
+John
+
+
+
+

@@ -1,0 +1,36 @@
+6) The code defines two objects, 'objA' and 'objB', and then logs the results of comparing these objects using both the '==' (equality) and '===' (strict equality) operators. 
+
+1. Two objects, `objA` and `objB`, are created with identical properties and values.
+   
+   var objA = {
+       foo: 'foo',
+       bar: 'bar'
+   };
+   var objB = {
+       foo: 'foo',
+       bar: 'bar'
+   };
+   
+
+2. The code compares 'objA' and 'objB using the '==' operator:
+   
+   console.log(objA == objB);
+   
+   The '==' operator checks for equality with type conversion, but when it comes to objects, it checks if both operands refer to the same object. Since 'objA' and 'objB' are two different objects in memory, 'objA == objB' evaluates to 'false'.
+
+3. The code compares 'objA' and 'objB' using the'===' operator.
+   console.log(objA === objB);
+   
+   The '===' operator checks for strict equality without type conversion. 
+It also checks if both operands refer to the exact same object. 
+Since 'objA' and 'objB' are two different objects in memory, 'objA === objB' also evaluates to 'false'.
+
+So, the output of the code will be
+
+false
+false
+
+
+Explanation:
+- Even though 'objA' and 'objB' have identical properties and values, they are different objects in memory.
+- Both the '==' and '===' operators check if the two objects are the same object in memory, not just if they have the same content. Since 'objA' and 'objB' are distinct objects, both comparisons return 'false'.

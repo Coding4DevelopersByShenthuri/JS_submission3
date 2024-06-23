@@ -1,0 +1,5 @@
+Promises are objects that represent the eventual completion or failure of an asynchronous operation. 
+They are useful for 
+1)managing asynchronous code 
+2)Allowing for more readable and structured handling of async tasks. 3)Avoiding callback hell.
+4)Enabling better error handling through chaining methods like `then()`, `catch()`, and `finally()`.

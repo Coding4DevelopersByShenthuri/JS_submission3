@@ -1,0 +1,1 @@
+We can check if a key exists in a JavaScript object using the `hasOwnProperty` method or the `in` operator.

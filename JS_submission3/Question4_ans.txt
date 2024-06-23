@@ -1,0 +1,17 @@
+The answer will be TypeError: employeeId is not a function
+
+
+The output of this code will be:
+
+```
+TypeError: employeeId is not a function
+
+
+1. 'employeeId' is initially declared as a string 'abc123'.
+2. The 'foo' function is defined.
+3. Inside 'foo', there's a function declaration with the same name 'employeeId'.
+4. When `foo' is, it trying to execute `employeeId()` as a function.
+5. However, before 'foo' executes, it encounters the function declaration of 'employeeId' inside 'foo'.
+6. Due to JavaScript's hoisting behavior, the function declaration 'function employeeId() { console.log(typeof employeeId); }' is hoisted onto the top of the 'foo' function.
+7. Therefore, when employeeId() is called inside 'foo', it refers to the local 'employeeId' function, not the global variable 'employeeId' that holds the string 'abc123'.
+8. Since the local 'employeeId' function is not assigned any value or functionality and is called as a function, it throws a 'TypeError' stating that 'employeeId is not a function.
